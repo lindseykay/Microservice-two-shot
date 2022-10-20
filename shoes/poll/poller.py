@@ -21,7 +21,7 @@ def get_bins():
     for bin in content["bins"]:
         BinVO.objects.update_or_create(
             import_href=bin["href"],
-            defaults={"name": bin["closet_name"]},
+            defaults={"closet_name": bin["closet_name"]},
         )
 
 
@@ -34,7 +34,7 @@ def poll():
             pass
         except Exception as e:
             print(e, file=sys.stderr)
-        time.sleep(30)
+        time.sleep(10)
 
 
 if __name__ == "__main__":
