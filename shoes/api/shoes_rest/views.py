@@ -9,7 +9,7 @@ from .models import Shoe, BinVO
 
 class BinVOEncoder(ModelEncoder):
     model = BinVO
-    properties = ["name", "import_href"]
+    properties = ["closet_name", "import_href"]
 
 
 class ShoeListEncoder(ModelEncoder):
