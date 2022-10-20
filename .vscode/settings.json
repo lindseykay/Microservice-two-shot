@@ -1,3 +1,4 @@
 {
-  "python.analysis.extraPaths": ["./hats/api"]
+  "python.analysis.extraPaths": ["./hats/api", "./shoes/api"],
+  // "python.analysis.extraPaths": ,
 }
