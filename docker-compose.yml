@@ -60,6 +60,7 @@ services:
     depends_on:
       - database
       - shoes-api
+      - wardrobe-api
     environment:
       DATABASE_URL: postgres://shoes:password@database:5432/shoes
       WAIT_HOSTS: database:5432,shoes-api:8000
