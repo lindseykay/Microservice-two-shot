@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "django_crontab",
+    # "django_crontab",
     "shoes_rest.apps.ShoesApiConfig",
     "corsheaders",
     'django.contrib.admin',
@@ -134,6 +134,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CRONJOBS = [
-    ("* * * * *", "shoes_rest.get_bins"),
-]
+# CRONJOBS = [
+#     ("* * * * *", "shoes_rest.get_bins"),
+# ]
