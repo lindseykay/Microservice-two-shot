@@ -13,7 +13,7 @@ class LocationVOEncoder(ModelEncoder):
 
 class HatListEncoder(ModelEncoder):
     model = Hat
-    properties = ["fabric", "color", "picurl", "location",]
+    properties = ["fabric", "color", "picurl", "location", "stylename"]
 
     encoders = {"location": LocationVOEncoder(),}
 

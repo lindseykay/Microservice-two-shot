@@ -19,7 +19,7 @@ async function loadHats() {
     console.log(data);
     root.render(
       <React.StrictMode>
-        <App hats={data.hats} />
+        <App hats={data.hats}/>
       </React.StrictMode>
     );
   } else {

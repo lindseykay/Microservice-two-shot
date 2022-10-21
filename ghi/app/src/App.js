@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import Nav from './Nav';
-// import ShoesList from './ShoesList';
-// import HatsList from "./HatsList";
+import HatsList from "./HatsList";
 import HatForm from "./HatForm";
 
 
@@ -17,8 +16,8 @@ return (
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="hats" >
-          {/* <Route path="" element={<HatsList hats={props.hats}/>} /> */}
-          <Route path="new" element={<HatForm />} />
+            <Route path="" element={<HatsList hats={props.hats}  test="thisisatest"/>} />
+            <Route path="new" element={<HatForm />} />
           </Route>
         </Routes>
       </div>
