@@ -10,28 +10,31 @@ root.render(
 );
 
 
-async function loadHats() {
-  const response = await fetch('http://localhost:8090/api/hats/');
-  console.log(response);
+async function loadData() {
+  const hatResponse = await fetch('http://localhost:8090/api/hats/');
+  console.log(hatResponse);
+  const shoeResponse = await fetch('http://localhost:8080/api/shoes/');
 
-  if (response.ok) {
-    const data = await response.json();
-    console.log(data);
+  if (hatResponse.ok && shoeResponse.ok) {
+    const hatData = await hatResponse.json();
+    const shoeData = await shoeResponse.json();
+
     root.render(
       <React.StrictMode>
-        <App hats={data.hats}/>
+        <App hats={hatData.hats} shoes={shoeData.shoes} />
       </React.StrictMode>
     );
   } else {
-    console.error(response);
+    console.error(hatResponse);
+    console.error(shoeResponse);
   }
 }
 
-loadHats();
+loadData();
 
 
 // async function loadShoes() {
-//   const response = await fetch('http://localhost:8080/api/shoes/');
+
 //   console.log(response);
 
 //   if (response.ok) {
@@ -76,4 +79,3 @@ loadHats();
 // main().catch((err) => {
 //   console.error(err);
 // });
-

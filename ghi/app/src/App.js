@@ -7,7 +7,6 @@ import ShoesList from "./ShoesList";
 import ShoeForm from './ShoeForm.js';
 
 function App(props) {
-
   if (props.shoes === undefined) {
     return null;
   }
