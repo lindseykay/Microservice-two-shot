@@ -4,6 +4,7 @@ import Nav from './Nav';
 import HatsList from "./HatsList";
 import HatForm from "./HatForm";
 
+import ShoeForm from './ShoeForm.js';
 
 function App(props) {
   // const { hats } = props;
@@ -18,6 +19,7 @@ return (
           <Route path="hats" >
             <Route path="" element={<HatsList hats={props.hats}  test="thisisatest"/>} />
             <Route path="new" element={<HatForm />} />
+            <Route path="new" element={<ShoeForm />} />
           </Route>
         </Routes>
       </div>
